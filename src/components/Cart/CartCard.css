@@ -1,0 +1,32 @@
+.cart-card-cont{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+    margin: 1rem;
+    padding: 1rem;
+}
+.cart-card-cont>img{
+    width: 15vw;
+}
+.cart-card-dtls-cont{
+    width: 60%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.deletebtn>button{
+    background-color:rgb(63, 63, 138);
+    color: white;
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+}
+.deletebtn>button:hover{
+    cursor: pointer;
+    background-color: rgb(41, 41, 91);
+}
+.noProds{
+    text-align: center;
+    margin-top: 20vh;
+}

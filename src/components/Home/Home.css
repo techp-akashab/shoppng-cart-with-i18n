@@ -1,0 +1,24 @@
+.home-cont {
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  border-radius: 30px;
+  box-shadow: 0px 0px 5px 2px black;
+  margin: 5rem 2rem;
+}
+.home-img {
+  height: 20rem;
+}
+.home-text {
+  font-size: 3.5rem;
+  border-width: 10px;
+  border-style: solid;
+  border-color: white;
+  border-left: none;
+  padding: 1rem 0;
+  border-right: none;
+  font-weight: 900;
+  width: 50vw;
+}

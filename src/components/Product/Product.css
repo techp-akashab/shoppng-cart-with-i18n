@@ -1,0 +1,7 @@
+.product-main-cont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 2rem 0.5rem;
+    gap: 3rem;
+}
