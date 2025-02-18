@@ -7,10 +7,12 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { modifyCart } from "../features/CartReducer";
 import { AppDispatch } from "../store/store";
+import { useTranslation } from "react-i18next";
 interface ProductCardProps {
   product: Product;
 }
 function ProductCard({ product }: ProductCardProps) {
+  const{t} = useTranslation();
   const dispatch = useDispatch<AppDispatch>();
   const handleSubmit = () => {
     dispatch(modifyCart({ id: product.id, quantity }));
@@ -19,9 +21,7 @@ function ProductCard({ product }: ProductCardProps) {
   return (
     <div className="prod-cont">
       <div className="prod-img-cont">
-        <div>
           <img src={product.image} alt="Product Image" />
-        </div>
       </div>
       <div className="prod-title-cont">
         <p>{product.title}</p>
@@ -41,14 +41,14 @@ function ProductCard({ product }: ProductCardProps) {
         </span>
       </div>
       <div className="prod-price-cont">
-        <p>Rs. {product.price}</p>
+        <p><strong>Rs. {product.price}</strong></p>
       </div>
       <div className="prod-quant-cont">
         <ChangeQuantity quantity={quantity} setQuantity={setQuantity} />
       </div>
       <div className="prod-addToCart-cont">
         <button onClick={handleSubmit}>
-          Add to Cart{" "}
+          {t('add_to_cart')}
           <span className="material-symbols-outlined">shopping_cart</span>
         </button>
       </div>
